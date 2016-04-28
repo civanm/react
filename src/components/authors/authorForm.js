@@ -17,7 +17,8 @@
                         placeholder="First Name"
                         ref="firstName"
                         onChange={this.props.onChange}
-                        value={this.props.author.firstName} />
+                        value={this.props.author.firstName}
+                        error={this.props.errors.firstName} />
                     <br />
                     <label htmlFor="lastName">First Name</label>
                     <input type="text"
@@ -26,7 +27,10 @@
                         placeholder="Last Name"
                         ref="lastName"
                         onChange={this.props.onChange}
-                        value={this.props.author.lastName} />
+                        value={this.props.author.lastName}
+                        error={this.props.errors.lastName}  />
+
+                    <div className="input">{this.props.errors.lastName}</div>
                     <br />
 
                     <input type="submit" value="Save" className="btn btn-primary" onClick={this.props.onSave} />
